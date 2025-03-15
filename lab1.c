@@ -8,18 +8,18 @@ int main(int argc, char *argv[]) {
 	double x1,x2,d;
 	
 	while (1){
-		printf("vvedite a:\n");
+		printf("vvod a:\n");
 		scanf("%lf", &a);
 	
-		printf("vvedite b:\n");
+		printf("vvod b:\n");
 		scanf("%lf", &b);
 	
-		printf("vvedite c:\n");
+		printf("vvod c:\n");
 		scanf("%lf", &c);
 	
 		d = pow(b,2) - 4*a*c;
 	
-		if (d < 0) printf("kornei net\n");
+		if (d < 0) printf("kornei nope\n");
 		
 		if (d == 0) {
 			x1 = (-b)/(2*a);
