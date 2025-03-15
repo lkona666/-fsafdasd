@@ -1,42 +1,37 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-int main(int argc, char *argv[]) {
-	double a,b,c;
-	double x1,x2,d;
-	
-	while (1){
-		printf("vvod a:\n");
-		scanf("%lf", &a);
-	
-		printf("vvod b:\n");
-		scanf("%lf", &b);
-	
-		printf("vvod c:\n");
-		scanf("%lf", &c);
-	
-		d = pow(b,2) - 4*a*c;
-	
-		if (d < 0) printf("kornei nope\n");
-		
-		if (d == 0) {
-			x1 = (-b)/(2*a);
-			printf("only one root x = %lf\n", x1);
-		}
-		
-		if (d > 0) {
-			x1 = (-b - sqrt(d))/(2*a);
-			x2 = (-b + sqrt(d))/(2*a);
-		
-			printf("x1 = %lf\n", x1);
-			printf("x2 = %lf\n", x2);
-			printf("d = %lf\n", d);
-		}
-	}
-	
-	
-	
-	return 0;
+#include <locale.h>
+int main()
+{
+    setlocale(LC_ALL,"RU");
+    double a,b,c; 
+    double x1;
+    double x2;
+    double d;
+    while(1){
+        printf("\nВведите переменную a: ");
+        scanf("%lf",&a);
+        printf("\nВведите переменную b: ");
+        scanf("%lf",&b);
+        printf("\nВведите переменную c: ");
+        scanf("%lf",&c);
+        d=pow(b,2)-4*a*c;
+        if (d<0){
+         printf("Корней нету\n");
+        } 
+        if(d==0){
+            x1=(-b)/(2*a);
+            printf("Только один корень: x=%lf",x1);
+        }
+        if(d>0){
+            x1=(-b+sqrt(d))/(2*a);
+            x2=(-b-sqrt(d))/(2*a);
+            printf("Первый корень = %lf",x1);
+            printf("\nВторой корень =%lf",x2);
+        }   
+    }
+    return 0;
+   
+    
 }
