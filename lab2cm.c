@@ -42,3 +42,27 @@ int main()
 
     return 0;
 }
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#define n 2
+int main()
+{
+    setlocale(LC_ALL,"RU");
+    int matrix[n][n];
+    printf("Матрица 2 на 2 :\n");
+    int i,j,k;
+    for (i=0;i<n;i++){
+        for (j=0;j<n;j++){
+            
+            scanf("%d",&matrix[i][j]);
+            for (k=0;k<n;k++){
+                matrix[i][j]+=matrix[i][k]*matrix[j][k];
+                
+    }   printf("matrix[%d][%d]:\n ",i,j);}     }
+    
+    
+    return 0;
+}
